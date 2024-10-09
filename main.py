@@ -20,7 +20,7 @@ def render_progressbar(total, iteration, prefix='', suffix='', length=30, fill='
 
 
 def notify_progress(chat_id,question):
-    message_id = bot.send_message(chat_id, "\nЗапускаю Таймер...\n" + render_progressbar(10,10))
+    message_id = bot.send_message(chat_id, "\nЗапускаю Таймер...\n")
     bot.create_countdown(parse(question), notify,chat_id = chat_id,message_id = message_id,question = question)
     bot.create_timer(parse(question), choose, chat_id = chat_id)
 
