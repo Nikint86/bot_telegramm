@@ -5,10 +5,6 @@ from pytimeparse import parse
 
 import ptbot
 
-load_dotenv()
-
-my_secret = os.getenv('TELEGRAM_TOKEN')
-
 
 def render_progressbar(total, iteration, prefix='', suffix='', length=30, fill='█', zfill='░'):
     iteration = min(total, iteration)
@@ -34,6 +30,8 @@ def notify(secs_left, chat_id, message_id,question):
 
 
 if __name__ == '__main__':
+    load_dotenv()
+    my_secret = os.getenv('TELEGRAM_TOKEN')
     TG_TOKEN = my_secret
     TG_CHAT_ID = '1248233669'
     bot = ptbot.Bot(TG_TOKEN)
