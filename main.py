@@ -32,9 +32,9 @@ def notify(secs_left, chat_id, message_id,question):
 if __name__ == '__main__':
     load_dotenv()
     my_secret = os.getenv('TELEGRAM_TOKEN')
-    TG_TOKEN = my_secret
-    TG_CHAT_ID = '1248233669'
-    bot = ptbot.Bot(TG_TOKEN)
+    tg_token = my_secret
+    tg_chat_id = '1248233669'
+    bot = ptbot.Bot(tg_token)
     bot.reply_on_message(notify_progress)
     bot.run_bot()
 
